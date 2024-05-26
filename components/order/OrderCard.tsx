@@ -4,13 +4,11 @@ import { formatMoney } from "@/src/utils"
 
 type OrderCardProps = {
     order: OrderWithProducts
-
 }
 
 export default function OrderCard({ order }: OrderCardProps) {
     
    
-
     return (
         <section
             aria-labelledby="summary-heading"
@@ -27,7 +25,8 @@ export default function OrderCard({ order }: OrderCardProps) {
                         <dt className="flex items-center text-sm text-gray-600">
                             <span className="font-black">({product.quantity}) {''}</span>
                         </dt>
-                        <dd className="text-sm font-medium text-gray-900">{product.product.name}</dd>
+                        <dd className="text-sm font-medium text-gray-900">{product.product.name}
+                        </dd>
 
                     </div>
 
@@ -39,10 +38,16 @@ export default function OrderCard({ order }: OrderCardProps) {
             </dl>
 
             <form action={completeOrder}>
+                <input 
+                    type="hidden" 
+                    value={order.id}
+                    name="order_id"
+                />
+
                 <input
                     type="submit"
                     className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer"
-                    value='Marcar Orden Completada'
+                    value='Marcar Comanda Completada'
                 />
             </form>
         </section>
