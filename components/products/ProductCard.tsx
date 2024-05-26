@@ -26,8 +26,8 @@ export default function ProductCard({product}: ProductCardProps) {
            <p className="mt-5 font-black text-4xl text-amber-500">
             {formatMoney(product.price)}</p>
 
-          <AddProductButton />
-          
+          <AddProductButton product={product}/>
+
             
         </div>
     </div>
