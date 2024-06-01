@@ -6,7 +6,7 @@ import { ProductSchema } from "@/src/schema"
 import { useRouter } from "next/navigation"
 import { toast } from "react-toastify"
 import { useParams } from "next/navigation"
-import { deleteProduct } from "@/actions/eliminate-product"
+
 
 export default function EditProductForm({children}: {children: React.ReactNode}) {
 

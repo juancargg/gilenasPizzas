@@ -1,8 +1,8 @@
-// components/DeleteButton.tsx
 'use client';
 
 import { deleteProduct } from '@/actions/eliminate-product';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 interface DeleteButtonProps {
     productId: number;
@@ -12,9 +12,9 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ productId }) => {
     const handleDelete = async () => {
         const result = await deleteProduct(productId);
         if (result?.errors) {
-            console.error(result.errors);
+            toast.error("No se ha podido borrar el producto");
         } else {
-            // Recargar la página para ver los cambios
+            toast.success("Producto borrado")
             window.location.reload();
         }
     };
