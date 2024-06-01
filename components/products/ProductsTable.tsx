@@ -1,13 +1,17 @@
+
 import { ProductsWithCategory } from "@/app/admin/products/page"
 import { formatMoney } from "@/src/utils"
 import { Category, Product } from "@prisma/client"
 import Link from "next/link"
+import DeleteButton from "../ui/DeleteButton"
+
 
 type ProductTableProps = {
     products: ProductsWithCategory
 }
 
 export default function ProductTable({products}: ProductTableProps) {
+   
     return (
         <div className="px-4 sm:px-6 lg:px-8 mt-20">
             <div className="mt-8 flow-root ">
@@ -50,6 +54,10 @@ export default function ProductTable({products}: ProductTableProps) {
                                             </span>
                                             </Link>
                                         </td>
+                                        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                                            <DeleteButton productId={product.id} />
+                                        </td>
+                                        
                                     </tr>
                                 ))}
                         

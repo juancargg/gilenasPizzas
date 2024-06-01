@@ -6,6 +6,7 @@ import { ProductSchema } from "@/src/schema"
 import { useRouter } from "next/navigation"
 import { toast } from "react-toastify"
 import { useParams } from "next/navigation"
+import { deleteProduct } from "@/actions/eliminate-product"
 
 export default function EditProductForm({children}: {children: React.ReactNode}) {
 
@@ -56,6 +57,7 @@ export default function EditProductForm({children}: {children: React.ReactNode})
                     font-bold cursor-pointer"
                 value={'Guardar Cambios'}
             />
+            
         </form>
         
     </div>
