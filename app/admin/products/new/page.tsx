@@ -11,9 +11,6 @@ export default function CreateProductPage() {
       <AddProductForm>
         <ProductForm />
       </AddProductForm>
-
-      
-
     </>
   )
 }

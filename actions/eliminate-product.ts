@@ -15,7 +15,7 @@ export async function deleteProduct(id: number | any) {
         revalidatePath('/admin/products')
     } catch (error) {
         return {
-            errors: [{ message: 'Error deleting the product', details: error }]
+            errors: [{ message: 'Error borrando el producto', details: error }]
         }
     }
 }

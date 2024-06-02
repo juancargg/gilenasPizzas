@@ -40,3 +40,8 @@ export const ProductSchema = z.object({
         .or(z.number().min(1, {message: 'La Categoría es Obligatoria' })),
     image: z.string().min(1, {message: 'La imagen es obligatoria'})
 })
+
+export const UserSchema = z.object({
+    email: z.string().trim().min(1, {message: 'Email no puede ir vacío'}),
+    password: z.string().trim().min(1, {message: 'Contraseña no puede ir vacío'}),
+})

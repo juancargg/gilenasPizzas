@@ -3,8 +3,6 @@ import { Product } from "@prisma/client"
 import Image from "next/image"
 import AddProductButton from "./AddProductButton"
 
-
-
 type ProductCardProps = {
     product: Product
 }
